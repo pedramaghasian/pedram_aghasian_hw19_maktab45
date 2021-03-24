@@ -1,0 +1,12 @@
+<% if(messages.length>0){ %>
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <button
+    type="button"
+    class="btn-close p-1"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></button>
+  <% messages.forEach(err=>{ %> <%= err %> <br />
+  <% }) %>
+</div>
+<% } %>

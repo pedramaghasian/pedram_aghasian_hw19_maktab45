@@ -1,0 +1,132 @@
+
+ <%- contentFor('header') %>
+    
+<header>
+  <div class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="/video/مقاله سرا.mp4" type="video/mp4">
+  </video>
+  <%if(!auth.check) {%>
+  <div class="container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <h1 id="main-h1" class="display-3 mb-5">همین حالا سفر خود را به دنیا ی مقاله ها شروع کنید </h1>
+        <!-- <p class="lead mb-0">     </p> -->
+        <a id="header-register" class="btn btn-danger" href="/auth/register">ثبت نام میکمنم !</a>
+      </div>
+    </div>
+  </div>
+  <%}%>
+</header>
+
+<!-- cards -->
+
+<div class="container emp-profile">
+  <h1>جدید ترین مقاله ها</h1>
+  <hr>
+<section id="gallery" class="my-5">
+  <div class="container">
+    <div class="row">
+    <div class="col-lg-4 mb-4">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">مقاله</h5>
+        <p class="card-text">این یک مقاله بسیارر عالی می باشد لطفا ادامه بدید و بخوانید</p>
+       <a href="" class="btn btn-outline-success btn-sm">ادامه مقاله</a>
+        <a href="" class="btn btn-outline-danger btn-sm"><i class="fa fa-heart"></i></a>
+      </div>
+     </div>
+    </div>
+  <div class="col-lg-4 mb-4">
+  <div class="card">
+      <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">مقاله</h5>
+        <p class="card-text">این یک مقاله بسیارر عالی می باشد لطفا ادامه بدید و بخوانید</p>
+       <a href="" class="btn btn-outline-success btn-sm">ادامه مقاله</a>
+        <a href="" class="btn btn-outline-danger btn-sm"><i class="fa fa-heart"></i></a>
+      </div>
+      </div>
+    </div>
+    <div class="col-lg-4 mb-4">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">مقاله</h5>
+        <p class="card-text">این یک مقاله بسیارر عالی می باشد لطفا ادامه بدید و بخوانید</p>
+       <a href="" class="btn btn-outline-success btn-sm">ادامه مقاله</a>
+        <a href="" class="btn btn-outline-danger btn-sm"><i class="fa fa-heart"></i></a>
+      </div>
+     </div>
+    </div>
+  </div>
+</div>
+</section>
+</div>
+
+<!-- end of cards -->
+
+
+
+
+
+<div class="container emp-profile">
+  <h1>جدید ترین کاربران</h1>
+  <hr>
+<div class="container">
+  <div class="row text-center">
+      <!-- Team item -->
+      <div class="col-xl-3 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://d19m59y37dris4.cloudfront.net/university/1-1-1/img/teacher-4.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+              <h5 class="mb-0">Manuella Nevoresky</h5><span class="small text-uppercase text-muted">CEO - Founder</span>
+              <ul class="social mb-0 list-inline mt-3">
+                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+          </div>
+      </div><!-- End -->
+
+      <!-- Team item -->
+      <div class="col-xl-3 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://d19m59y37dris4.cloudfront.net/university/1-1-1/img/teacher-2.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+              <h5 class="mb-0">Samuel Hardy</h5><span class="small text-uppercase text-muted">CEO - Founder</span>
+              <ul class="social mb-0 list-inline mt-3">
+                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+          </div>
+      </div><!-- End -->
+
+      <!-- Team item -->
+      <div class="col-xl-3 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://d19m59y37dris4.cloudfront.net/university/1-1-1/img/teacher-1.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+              <h5 class="mb-0">Tom Sunderland</h5><span class="small text-uppercase text-muted">CEO - Founder</span>
+              <ul class="social mb-0 list-inline mt-3">
+                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+          </div>
+      </div><!-- End -->
+
+      <!-- Team item -->
+      <div class="col-xl-3 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://d19m59y37dris4.cloudfront.net/university/1-1-1/img/teacher-7.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+              <h5 class="mb-0">John Tarly</h5><span class="small text-uppercase text-muted">CEO - Founder</span>
+              <ul class="social mb-0 list-inline mt-3">
+                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                  <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+          </div>
+      </div><!-- End -->
+  </div>
+</div>
+</div>

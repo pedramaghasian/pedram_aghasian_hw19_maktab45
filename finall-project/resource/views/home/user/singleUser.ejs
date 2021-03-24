@@ -1,0 +1,355 @@
+<%- contentFor('user') %>
+
+
+<!------ Include the above in your HEAD tag ---------->
+<%- include('../includes/error-messages') -%>
+
+
+<div class="container emp-profile">
+            
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                          <img src="<%=`http://localhost:3000/${user.image}`%>" alt="">
+               
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-head">
+                                    <h5>
+                                       <%= user.name %> <%= user.lastname %> 
+                                    </h5>
+  
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">پروفایل من</a>
+                                </li>
+                         
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                      <!--  dropdown action -->
+
+                      <div class="btn-group" >
+                        <button
+                          type="button"
+                          class="btn btn-warning btn-sm text-dark dropdown-toggle"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          عملیات بیشتر
+                        </button>
+                        <ul class="dropdown-menu" id="dropdown">
+                          <li class="">
+                            <button
+                              type="button"
+                              class="border border-0"
+                              data-bs-toggle="modal"
+                              data-bs-target="#exampleModalEdite"
+                              data-bs-whatever="@mdo"
+                            >
+                              ویرایش اطلاعات
+                            </button>
+                          </li>
+                          <li class="my-3">
+                            <button
+                              type="button"
+                              class="border border-0"
+                              data-bs-toggle="modal"
+                              data-bs-target="#exampleModal"
+                              data-bs-whatever="@mdo"
+                            >
+                              تغییر کلمه عبور
+                            </button>
+                          </li>
+                          <li><hr class="dropdown-divider" /></li>
+                          <li>
+                            <form action="/user/delete" method="POST">
+                              <input type="hidden" name="userId" value="<%=user._id%>" />
+                              <button
+                                type="submit"
+                                class="border border-0 text-danger"
+                                data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"
+                                data-bs-whatever="@mdo"
+                              >
+                                حذف حساب کاربری
+                              </button>
+                            </form>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- end of dropdown action -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-work">
+                   
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label> نام   </label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p><%= user.name %> </p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>نام خانوادگی</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p> <%= user.lastname %> </p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>ایمیل</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p><%= user.email %> </p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>تلفن</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p><%= user.phone %> </p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>جنسیت</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p><%= user.gender %> </p>
+                                            </div>
+                                        </div>
+                            </div>
+                      </div>
+                        </div>
+                    </div>
+                </div>
+                     
+        </div>
+
+<div class="container emp-profile">   
+<section id="gallery" class="my-5">
+  <div class="container">
+    <div class="row">
+    <div class="col-lg-4 mb-4">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">مقاله</h5>
+        <p class="card-text">این یک مقاله بسیارر عالی می باشد لطفا ادامه بدید و بخوانید</p>
+       <a href="" class="btn btn-outline-success btn-sm">ادامه مقاله</a>
+        <a href="" class="btn btn-outline-danger btn-sm"><i class="fa fa-heart"></i></a>
+      </div>
+     </div>
+    </div>
+  <div class="col-lg-4 mb-4">
+  <div class="card">
+      <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">مقاله</h5>
+        <p class="card-text">این یک مقاله بسیارر عالی می باشد لطفا ادامه بدید و بخوانید</p>
+       <a href="" class="btn btn-outline-success btn-sm">ادامه مقاله</a>
+        <a href="" class="btn btn-outline-danger btn-sm"><i class="fa fa-heart"></i></a>
+      </div>
+      </div>
+    </div>
+    <div class="col-lg-4 mb-4">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">مقاله</h5>
+        <p class="card-text">این یک مقاله بسیارر عالی می باشد لطفا ادامه بدید و بخوانید</p>
+       <a href="" class="btn btn-outline-success btn-sm">ادامه مقاله</a>
+        <a href="" class="btn btn-outline-danger btn-sm"><i class="fa fa-heart"></i></a>
+      </div>
+     </div>
+    </div>
+  </div>
+</div>
+</section>
+</div>
+
+
+
+
+
+
+
+<!-- modal Edite -->
+
+<div
+  class="modal fade my-5"
+  id="exampleModalEdite"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          صفحه ویرایش مشخصات کاربر
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form action="/user/edit" method="POST" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label for="name" class="col-form-label">نام </label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              value="<%= user.name %> "
+            />
+          </div>
+          <div class="mb-3">
+            <label for="lastname" class="col-form-label">نام خانوادگی</label>
+            <input
+              type="text"
+              class="form-control"
+              id="lastname"
+              name="lastname"
+              value="<%= user.lastname %> "
+            />
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="col-form-label">  تلفن</label>
+            <input
+              type="text"
+              class="form-control"
+              id="phone"
+              name="phone"
+              value="<%= user.phone %> "
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="col-form-label"> ایمیل</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              value="<%= user.email %> "
+            />
+          </div>
+                            <!-- gender -->
+        <div class="form-group mb-3">
+          <label for="gender" class="col-sm-2 col-form-label ">جنسیت</label>
+         <div class="col-sm-12">
+           <select id="gender" name="gender"class="form-select" >
+            <option value="none"selected>جنسیت خود را انتخاب کنید</option>
+             <option value="male">مرد</option>
+             <option value="female">زن</option>
+           </select>
+         </div>
+       </div>
+       <!-- end gender -->
+          <div class="form-group mb-3">
+            <label for="image" class="control-label"> تصویر پروفایل </label>
+            <input
+              id="image"
+              type="file"
+              class="form-control"
+              name="image"
+
+            />
+          </div>
+
+          <input type="hidden" name="userId" value="<%= user._id%>" />
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              خروج
+            </button>
+            <button type="submit" class="btn btn-warning">ثبت تغییرات</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of modal Edit -->
+
+<!-- modal change passwrod -->
+<div
+  class="modal fade my-5"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">تغییر رمز عبور</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form action="/user/password" method="POST">
+          <div class="mb-3">
+            <label for="old-password" class="col-form-label"
+              >کلمه عبور قبلی</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="old-password"
+              name="oldPassword"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="new-password" class="col-form-label"
+              >کلمه عبور جدید</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="new-password"
+              name="newPassword"
+            />
+            <input type="hidden" name="userId" value="<%=user._id%>" />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              خروج
+            </button>
+            <button type="submit" class="btn btn-warning">ثبت تغییرات</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal change passwrod -->

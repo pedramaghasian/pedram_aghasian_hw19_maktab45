@@ -1,0 +1,97 @@
+
+<div class="row pt-5 justify-content-center">
+  <div class="col-sm-10 col-md-8">
+    <div class="card">
+      <div class="card-header"><h5>عضویت در سایت</h5></div>
+      <div class="card-body">
+        <form
+          class="form-horizontal"
+          method="POST"
+          enctype="multipart/form-data"
+          action="/auth/register"
+          novalidate
+        >
+          <%- include('../includes/error-messages') -%>
+          <div class="form-group mb-3">
+            <label for="name" class="control-label">نام </label>
+            <input
+              id="name"
+              type="text"
+              class="form-control"
+              name="name"
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label for="lastname" class="control-label">نام خانوادگی</label>
+            <input
+              id="lastname"
+              type="text"
+              class="form-control"
+              name="lastname"
+            />
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="email" class="control-label">آدرس ایمیل</label>
+            <input
+              id="email"
+              type="email"
+              class="form-control"
+              name="email"
+
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label for="phone" class="control-label">شماره تماس </label>
+            <input
+              id="phone"
+              type="number"
+              class="form-control"
+              name="phone"
+
+            />
+          </div>
+                  <!-- gender -->
+        <div class="form-group mb-3">
+          <label for="gender" class="col-sm-2 col-form-label ">جنسیت</label>
+         <div class="col-sm-12">
+           <select id="gender" name="gender"class="form-select" >
+             <option value="male">مرد</option>
+             <option value="female">زن</option>
+           </select>
+         </div>
+       </div>
+       <!-- end gender -->
+          <div class="form-group mb-3">
+            <label for="image" class="control-label"> تصویر پروفایل </label>
+            <input
+              id="image"
+              type="file"
+              class="form-control"
+              name="image"
+
+            />
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="password" class="control-label">کلمه عبور</label>
+            <input
+              id="password"
+              type="password"
+              class="form-control"
+              name="password"
+            
+            />
+          </div>
+
+          <div class="form-group mb-3"><%- captcha %></div>
+          <div class="form-group mb-3">
+            <button type="submit" class="btn btn-primary">عضویت</button>
+            <a href="/auth/google" class="btn btn-danger">ورود با اکانت گوگل</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="height: 500px;"></div>

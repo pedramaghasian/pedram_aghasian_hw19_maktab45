@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><%- defineContent('title') || 'مقاله سرا'  %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/img/logo-1.png" type="image/x-icon">
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.rtl.min.css" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">   
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/vazir.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/css/fakeUser.css">
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+    <script src="/js/bootstrap.bundle.min.js" defer></script>
+
+    <%- style %>
+  </head>
+
+  <body>
+    
+    <nav class="navbar navbar-expand-md navbar-dark " style="background-color: #414141;">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+               <img id="logo-nav" src="/img/logo-1.png" alt="logo" >
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+              <ul id="nav-ul" class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">صفحه اصلی</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> تماس با ما</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">درباره ما</a>
+                </li>
+    
+              </ul>
+              <ul id="navbar-right" class="nav navbar-nav navbar-right">
+                <% if(auth.check) { %>
+                  <li><a class="btn btn-success btn-sm mx-2" href="/user">پنل کاربری</a></li>
+                  <li><a class="btn btn-danger btn-sm" href="/logout">خروج</a></li>       
+                <% } else { %>
+                  <li><a class="btn btn-success btn-sm mx-2" href="/auth/login">ورود</a></li>
+                  <li><a class="btn btn-primary btn-sm" href="/auth/register">عضویت</a></li>       
+                <% } %>
+          </ul>
+      
+            </div>
+        </div>
+      </nav>
+
+      <%-defineContent('header')%>
+      <%-defineContent('user')%>
+
+    
+     <div class="container my-5">
+      <%-body%>
+    </div>
+    
+    
+  
+    
+     <div style="margin-bottom: 400px;"></div>
+
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-left col-md-4 col-sm-6">
+        <p class="about">
+          <span> معرفی سایت مقاله سرا </span> 
+           سایت مقاله سرا در سال 1400 با هدف بهبود کیفیت سرانه مطالعه در کشور توسط جوانان پرشور ایران اسلامی تاسیس گردید   
+        </p>
+        <div class="icons">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-google-plus"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-center col-md-4 col-sm-6">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span> ایران - تهران </span> </p>
+        </div>
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>  09120275368</p>
+        </div>
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="#">pedram.aghasian@yahoo.com</a></p>
+        </div>
+      </div>
+      <div class="footer-right col-md-4 col-sm-6">
+        <h2> <img id="logo" src="/img/logo-1.png" alt="logo" ></h2>
+        <p class="menu">
+          <a href="#"> خانه</a> |
+          <a href="#"> درباره ما</a> |
+          <a href="#"> تماس با ما</a> |
+          <a href="#"> پشتیبانی</a> |
+          <a href="#"> خبرنامه</a> |
+        </p>
+        <p class="name"> مقاله سرا  &copy; 2021</p>
+      </div>
+    </footer>
+    <!-- footer -->
+  
+    <%- script %>
+  </body>
+</html>

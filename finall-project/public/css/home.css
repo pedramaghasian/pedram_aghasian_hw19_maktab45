@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Vazir', Vazir, Tahoma, Arial, sans-serif !important;
+  font-size: 0.875rem;
+  font-weight: 300;
+  position: relative;
+  min-height: calc(100vh - 85px);
+  /* direction: rtl;
+  text-align: right; */
+}
+
+/* footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 80px;
+  width: 100%;
+} */
+
+#logo {
+  height: 100px;
+  width: 100px;
+  border-radius: 50% 50%;
+}
+
+#logo-nav {
+  height: 50px;
+  width: 120px;
+  background-position: center;
+  background-size: cover;
+}
+
+#nav-ul a {
+  color: white;
+  font-size: 1rem;
+}
+
+#navbar-right {
+  position: absolute;
+  left: 300px;
+  width: 200px;
+}
+
+#dropdown button {
+  background-color: white;
+}
